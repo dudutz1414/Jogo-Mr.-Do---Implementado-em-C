@@ -1,7 +1,7 @@
 //Nomes: Eduardo Brito e Tatiane Stivelman
 #include<stdio.h>
 #include<stdlib.h>
-//#include<conio2.h>
+#include<conio2.h>
 #include<windows.h>
 #include<time.h>
 #define NUMLIN 23
@@ -751,42 +751,42 @@ int imprime_matriz(char mat[NUMLIN][NUMCOL],int pos_do[], Highscore high[], Game
         {
             if(mat[l][c]=='p') //Caso for p, printa o caracter equivalente a parede
             {
-                //textcolor(GREEN);
+                textcolor(GREEN);
                 printf( "%c", 176);
 
             }
             else if(mat[l][c]=='i') //Caso for i, printa o caracter equivalente ao fantasma
             {
                 conta_fantasma++; //É incrementado o numero de fantasmas, para sempre se ter a contagem deles, pois caso chegue a zero, significa que se passou de fase/ganhou
-                //textcolor(LIGHTBLUE);
+                textcolor(LIGHTBLUE);
                 printf( "%c", 153);
             }
             else if(mat[l][c]=='f') // Caso f, coloca o caracter correspondente a fruta
             {
                 conta_fruta++; //É incrementado o número de frutas, para sempre se ter a contagem deles, pois caso chegue a zero, significa que se passou de fase/ganhou
-                //textcolor(LIGHTGREEN);
+                textcolor(LIGHTGREEN);
                 printf( "%c", 229);
             }
             else if(mat[l][c]=='d') //Caso d, colocao caracter equivalente ao Mr Do
             {
                 pos_do[0] = l; //obtem a posição do Mr.Do, para se salvar no estado por exemplo, para quando continuar o jogo ele está na posição correta
                 pos_do[1] = c;
-                //textcolor(LIGHTMAGENTA);
+                textcolor(LIGHTMAGENTA);
                 printf( "%c", 227);
             }
             else if(mat[l][c]=='v')//Caso v, colocao caracter equivalente ao vazio
             {
-                //textcolor(BLACK);
+                textcolor(BLACK);
                 printf( "%c", 32);
             }
             else if(mat[l][c]=='n') //Caso n, colocao caracter equivalente ao ninho onde nascerá os fantasmas
             {
-                //textcolor(BROWN);
+                textcolor(BROWN);
                 printf( "%c", 206);
             }
             else if(mat[l][c]=='t') //caso t, printa o tiro dispadaro pelo Mr.Do
             {
-                //textcolor(YELLOW);
+                textcolor(YELLOW);
                 printf( "%c", 250);
             }
 
@@ -1044,7 +1044,7 @@ int novojogo (FILE *cenario, int pos_do[], FILE *estado, Highscore high[], GameS
 
 
 
-    //textcolor(YELLOW);
+    textcolor(YELLOW);
     cenario = fopen("continua.txt","w"); //abre o arquivo continua onde será salvo a matriz modificada para poder continuar o jogo depois
     estado = fopen("estado.bin","wb"); //abre o arquivo de estado onde será salvo o estado do score e numero de fantasmas para poder continuar o jogo depois
     for(i=0; i<NUMLIN; i++)
@@ -1088,7 +1088,7 @@ void imprime_highscores(Highscore high[])
 
 int menu () //nome de funcao auto explicativo
 {
-    //textcolor(YELLOW);
+    textcolor(YELLOW);
     Highscore high[6] = {0,0,0,0,0,0};
 
     GameState est = {0,0};
