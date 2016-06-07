@@ -1,0 +1,13 @@
+Lógica do programa:
+O programa parte do 'main' onde é definido onde vai ser impressa a matriz, e então é colocada a "semente" do rand e chama a função 'menu'.
+A função 'menu' chama as funções de acordo com a escolha do jogador, atribuindo valores para variáveis a serem passadas como parâmetros.
+O jogo mesmo acontece na função 'novojogo' que junta todas as outras funções.
+Existem três structs no programa. Uma se chama GameState, esta serve para controlar o estado do jogo. Pois ao sair utilizando a tecla ESC é salvo essa estrutura contendo o score atual e o numero de fantasmas que já nasceram, para que seja possível continuar o jogo depois. A outra struct se chama Highscore, esta por sua vez
+é usada como um vetor de structs para ser salva no arquivo HighScore para que quando solicitado se tenha os top 5 usuários. Nela contém a informação do nome e pontuação do jogador. E por último a struct TIRO. Esta estrutura possui a informação da última direção que o Mr.Do se moveu, para que o tiro vá para esta direção.
+
+Explicação de cada função:
+
+
+Como usar o programa:
+Em primeiro lugar, o programa criará arquivos binários e de texto com informações necessárias para ele funcionar. Estes arquivos não devem ser alterados pelo usuário.
+A partir de inicializado o programa, deve-se escolher a opção desejada no menu. Escolhida a opção 1, inicia-se uma nova partida. Para mover o Mr.Do use as setas do teclado e para atirar se usa o espaço. Pressione ESC para voltar ao menu. Para continuar seu jogo salvo pressione 2 no menu. A opção 3 mostra os Highscores e a 4 sai do programa.
